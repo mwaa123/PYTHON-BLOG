@@ -20,8 +20,7 @@ This is a python flask created applcation an a blog where as the writer,i get to
 
 * Open Terminal {Ctrl+Alt+T}
 
-* git clone "https://github.com/mwaa123/BLOG"
-
+* git clone "https://github.com/mwaa123/PYTHON-BLOG/tree/dev"
 * cd Quotes-app
 
 * code . or atom . based on the text editor you have.
