@@ -157,15 +157,15 @@ def update_profile(uname):
     return render_template('profile/update.html',form =form)
    
 
-# @main.route('/post/<int:post_id>/comment', methods=['GET','POST'])
-# def comment(post_id):
-#     form_comment=Comments()
-#     post=post.query.filter_by(id=post_id).first()
-#     comment_query=Comment.query.filter_by(post_id=post.id).all()
-#     if form_comment.validate_on_submit():
-#         comment=Comment(comment=form_comment.comment.data,post_id=post.id,user_id=current_user.id)
-#         db.session.add(comment)
-#         db.session.commit()
-#         return redirect(url_for('main.comment',post_id=post.id))
-#     print(image)
-#     return render_template('comment.html',form=form_comment,post=post,comments=comment_query,title='Comments')
+@main.route('/post/<int:post_id>/comment', methods=['GET','POST'])
+def comment(post_id):
+    form_comment=Comments()
+    post=post.query.filter_by(id=post_id).first()
+    comment_query=Comment.query.filter_by(post_id=post.id).all()
+    if form_comment.validate_on_submit():
+        comment=Comment(comment=form_comment.comment.data,post_id=post.id,user_id=current_user.id)
+        db.session.add(comment)
+        db.session.commit()
+        return redirect(url_for('main.comment',post_id=post.id))
+    print(image)
+    return render_template('comment.html',form=form_comment,post=post,comments=comment_query,title='Comments')
