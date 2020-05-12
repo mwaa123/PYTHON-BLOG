@@ -1,24 +1,31 @@
 {% extends 'base.html'%}
 
-<!-- Styles block -->
-
-{% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock %}
+ 
 {% block content %}
-{% for post in posts %}
 <div class="container">
-<article class="media content-section">
-  <div class="media-body">
-    <div class="article-metadata">
-      <a class="mr-2" href="#">{{ post.author.username }}</a>
-      <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-    </div>
-    <h2><a class="article-title" href="{{ url_for('main.post', post_id= post.id) }}">{{ post.title }}</a></h2>
-    <p class="article-content">{{ post.content }}</p>
-  </div>
-</article>
-</div>
-{% endfor %}
+{% for post in posts %}
+
+    <div class="row">
+        <div class="col-md-6">
+          <div class="blog-card spring-fever" style="background-color: black;">
+            <div class="title-content">
+              <h3><a class="article-title" href="{{ url_for('main.post', post_id= post.id) }}">{{ post.title }}</a></h3>
+              <hr />
+              <div class="intro"><a href="#">{{ post.author.username }}</a></div>
+            </div><!-- /.title-content -->
+            <div class="card-info">
+              {{ post.content }}
+            </div><br><br><!-- /.card-info -->
+            <div class="utility-info">
+              <ul class="utility-list">
+                <li class="date">{{ post.date_posted.strftime('%Y-%m-%d') }}</li>
+              </ul>      
+            </div><!-- /.utility-info -->
+            <!-- overlays -->
+            <div class="gradient-overlay"></div>
+            <div class="color-overlay"></div>
+          </div><!-- /.blog-card --> 
+    </div>      
+</div>   
+{% endfor %}  
 {%endblock%}

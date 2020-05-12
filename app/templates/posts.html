@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 {% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -43,5 +46,11 @@
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
     </form>
+</div>
+</div>
+    <div class="col-md-6">
+        <image style="float: right;height: 430px;" src="{{url_for('static',filename='images/wert.jpg')}}"></image>        
+    </div>
+</div>
 </div>
 {%endblock%}

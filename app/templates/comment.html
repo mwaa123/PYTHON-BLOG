@@ -1,0 +1,35 @@
+<!-- {% extends 'base.html'%}
+{% block content %}
+
+<p>
+    <class class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="link" aria-expanded="false" aria-controls="collapseExample">
+    Comment 
+    </class>
+</p>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body form-inline">
+        {{wtf.quick_form(form)}}
+    </div>
+</div>
+<hr>
+<div class=" card comments">
+    <h4 class="card-header">View all post comments</h4>
+    <ul>
+        {% for comment in comments%}
+        <li style="list-style-type: none;">
+            <div class="col-md-8 col-lg-8 col-sm-8 col-xs-6">
+                    <span class="header">{{comment.user.username}}</span> <br>
+                    <span class="rounded">{{comment.comment}} </span><hr>                          
+            </div>
+            {% if post.user==current_user%}
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-4">
+                <a href="{{url_for('main.delete_comment',comment_id=comment.id)}}" class="btn btn-danger"><small>Delete comment</small></a>
+            </div>
+            {% endif %}
+            <br>
+        </li>
+        <br>
+        {% endfor%}
+    </ul>
+</div>
+{%end block%} -->

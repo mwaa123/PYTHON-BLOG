@@ -7,14 +7,24 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index.html"> account</a>
+            <a class="navbar-brand" href="/page">page</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
+                <li><a href="/random">Random</a></li>
         </div>
+        <div class="icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+   
+            <i><a href="#" class="fab fa-facebook-f"></a></i>
+             <a href="#" class="fab fa-youtube"></a>
+             <a href="#" class="fab fa-instagram"></a>
+             <a href="#" class="fab fa-twitter"></a>
+             <a href="#" class="fab fa-whatsapp"></a>
+           </div>
         <ul class="nav navbar-nav navbar-right">
             {% if current_user.is_authenticated %}
+            <li><a href="{{url_for('main.update_profile',uname=current_user.username)}}">Profile</a></li>
             <li><a href="{{url_for('main.new_post')}}">New post</a></li>
             <li style="color:white;padding:15px;">{{current_user.username}}</li>
             <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>

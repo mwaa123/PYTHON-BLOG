@@ -1,4 +1,5 @@
-/* @import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
+
+@import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
 html,body{
   height:100%
 }
@@ -285,7 +286,7 @@ h3:after {
 /*  ================  */
 
 /* ignore this bit :P */
-/* #profile-badges:after {
+#profile-badges:after {
     content: "BRO";
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
     font-size:13px;
@@ -415,4 +416,51 @@ h3:after {
 }
 .meta{
   box-shadow:none !important
-}  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

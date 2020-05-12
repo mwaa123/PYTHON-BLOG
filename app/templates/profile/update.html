@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <p>write something about you...</p>
+  {{wtf.quick_form(form)}}
+    </div>
+    <div class="col-md-6">
+      <image style="float: right;height: 430px;" src="{{url_for('static',filename='images/glass.jpg')}}"></image>   
+    </div>
+  </div>
+</div>
+{% endblock %}
