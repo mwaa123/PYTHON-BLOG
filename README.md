@@ -21,13 +21,14 @@ This is a python flask created applcation an a blog where as the writer,i get to
 * Open Terminal {Ctrl+Alt+T}
 
 * git clone "https://github.com/mwaa123/PYTHON-BLOG/tree/dev"
-* cd Quotes-app
+
+* cd ruthblog
 
 * code . or atom . based on the text editor you have.
 
 ## Requirements
 
-* One must be logged in or have signed up to be able to add a pitch
+* One must be logged in or have signed up to be able to add a add a blog
 
 * One has to have correct credentials for the email to be signed up.
 
@@ -35,13 +36,11 @@ This is a python flask created applcation an a blog where as the writer,i get to
 
 ## A user will be able to
 
-* view the different pitches from the different categories.
+* view the different blogs  from me.
 
 * log in and get their own account.
 
-* Add a pitch in condition that they are logged in.
-
-* Get a welcoming email message after their signup.
+* Add a blog  in condition that they are logged in.
 
 ## Technologies Used
 
@@ -52,7 +51,7 @@ This is a python flask created applcation an a blog where as the writer,i get to
 
 ## Known Bugs
 
-
+* The comment and email for subscription is not yet visible.
 
 ## Contact Information
 
